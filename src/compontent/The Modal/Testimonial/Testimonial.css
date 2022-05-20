@@ -1,0 +1,152 @@
+.choose-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.single-choose-right {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: right;
+    padding-right: 95px;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.single-choose-right:last-child {
+    margin-bottom: 0;
+}
+
+.single-choose-right i {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    line-height: 75px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0779e4), color-stop(#0087e7), color-stop(#0094e7), color-stop(#00a0e5), to(#29abe2));
+    background: linear-gradient(to bottom, #0779e4, #0087e7, #0094e7, #00a0e5, #29abe2);
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 48% 52% 35% 65% / 65% 44% 56% 35%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.single-choose-right h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.single-choose-right h3 a {
+    color: var(--blackColor);
+}
+
+.single-choose-right p {
+    margin-bottom: 0;
+}
+
+.single-choose-right:hover i {
+    -webkit-animation: bounce 1.2s;
+    animation: bounce 1.2s;
+}
+
+.single-choose-right:hover h3 a {
+    color: var(--mainColor);
+}
+
+.single-choose-left {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: left;
+    padding-left: 95px;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.single-choose-left:last-child {
+    margin-bottom: 0;
+}
+
+.single-choose-left i {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    line-height: 75px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0779e4), color-stop(#0087e7), color-stop(#0094e7), color-stop(#00a0e5), to(#29abe2));
+    background: linear-gradient(to bottom, #0779e4, #0087e7, #0094e7, #00a0e5, #29abe2);
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 48% 52% 35% 65% / 65% 44% 56% 35%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.single-choose-left h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.single-choose-left h3 a {
+    color: var(--blackColor);
+}
+
+.single-choose-left p {
+    margin-bottom: 0;
+}
+
+.single-choose-left:hover i {
+    -webkit-animation: bounce 1.2s;
+    animation: bounce 1.2s;
+}
+
+.single-choose-left:hover h3 a {
+    color: var(--mainColor);
+}
+
+.choose-image {
+    background-image: url(../../assets/images/choose/choose-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.choose-image .square-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.choose-main-shape .shape-1 {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    max-width: 250px;
+    z-index: -1;
+    opacity: 50%;
+    -webkit-animation: moveleftbounce 5s linear infinite;
+    animation: moveleftbounce 5s linear infinite;
+}
+
+.choose-main-shape .shape-2 {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    z-index: -1;
+    opacity: 50%;
+    -webkit-animation: moveleftbounce 5s linear infinite;
+    animation: moveleftbounce 5s linear infinite;
+}

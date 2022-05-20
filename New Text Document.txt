@@ -1,0 +1,1617 @@
+ {products.map((hell, index) => {
+              return (
+                <>
+                  <button
+                    key={index}
+                    className=" btn-open-modal  animated fadeInRight"
+                    data-toggle="modal"
+                    data-target={"#modal-fullscreen-xl" + index}
+                  >
+                    <div className="item  ">
+                      <div className="listing-bx featured-star-left m-b30">
+                        <div className="listing-media ">
+                          <img
+                            style={{ width: "360px", height: "200px" }}
+                            src={hell.image}
+                            alt
+                          />
+                        </div>
+                        <div className="listing-info">
+                          <h3 className="title">
+                            <a style={{ textTransform: "capitalize" }}>
+                              {hell.name}
+                            </a>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    className="modal modal-fullscreen-xl  animated fadeInRight"
+                    id={"modal-fullscreen-xl" + index}
+                    tabIndex={-1}
+                    role="dialog"
+                    aria-hidden="true"
+                  >
+                    <div className="modal-dialog" role="document">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5
+                            className="modal-title"
+                            style={{ textTransform: "capitalize" }}
+                          >
+                            {hell.name}
+                          </h5>
+
+                          <div className="buys ">
+                            <MdShoppingBasket className="MdShoppings"   onClick={showCarts}/>
+                            {cartItemss && cartItemss.length > 0 && (
+                              <div className="MdColors ">
+                                <p className="MdShopText ">
+                                  {cartItemss.length}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* <button
+                            type="button"
+                            className="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">*</span>
+                          </button> */}
+                        </div>
+
+                        {index == 0 ? (
+                          <div className="modal-body">
+                            <div className="page-content bg-white">
+                              {/* inner page banner */}
+                              <div
+                                className="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+                                style={{
+                                  backgroundImage: `url("/images/banner/AIR.jpg")`,
+                                }}
+                              >
+                                <div className="container">
+                                  <div className="dlab-bnr-inr-entry">
+                                    <h1 className="text-white">AIR PURIFIER</h1>
+
+                                    {/* Breadcrumb row */}
+                                    <div className="breadcrumb-row">
+                                      <ul className="list-inline">
+                                        <li>
+                                          <a href="index.html">Home</a>
+                                        </li>
+                                        <li> AIR PURIFIER</li>
+                                      </ul>
+                                    </div>
+                                    {/* Breadcrumb row END */}
+                                  </div>
+                                </div>
+                              </div>
+                              {/* inner page banner END */}
+                              {/* contact area */}
+                              <div className="content-block">
+                                <div className="section-full content-inner bg-white">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-lg-8 col-md-6">
+                                        <div className="listing-filter m-b40">
+                                          <div className="d-flex">
+                                            <div className="mr-auto">
+                                              <ul className="filter m-b0">
+                                                <li>
+                                                  <select>
+                                                    <option>
+                                                      More Filters
+                                                    </option>
+                                                    <option>
+                                                      Construction
+                                                    </option>
+                                                    <option>Corodinator</option>
+                                                    <option>Employer</option>
+                                                    <option>
+                                                      Financial Career
+                                                    </option>
+                                                    <option>
+                                                      Information Technology
+                                                    </option>
+                                                    <option>Marketing</option>
+                                                    <option>
+                                                      Quality check
+                                                    </option>
+                                                    <option>Real Estate</option>
+                                                    <option>Sales</option>
+                                                    <option>Supporting</option>
+                                                    <option>Teaching</option>
+                                                  </select>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            <div>
+                                              <ul className="filter-icon m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th" />
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th-list" />
+                                                  </a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="row">
+                                          {product.map((hel, index) => {
+                                            return (
+                                              <div
+                                                className="col-lg-12 col-md-12 col-sm-6 m-b30"
+                                                key={index}
+                                              >
+                                                <div
+                                                  className="product"
+                                                  style={{
+                                                    scrollBehavior: "smooth",
+                                                  }}
+                                                >
+                                                  <div className="title">
+                                                    {hel.name}
+                                                  </div>
+                                                  <div className="text">
+                                                    <div className="code">
+                                                      {hel.id}
+                                                    </div>
+                                                    <div className="description">
+                                                      The ultimate medium to
+                                                      super-telephoto zoom lens.
+                                                    </div>
+                                                    <div className="review">
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon star-disable" />
+                                                      <span className="star-reviews">
+                                                        84 reviews
+                                                      </span>
+                                                    </div>
+                                                    <div className="price">
+                                                      <i className="fa fa-rupee">
+                                                        {hel.price}
+                                                      </i>
+                                                    </div>
+                                                    <motion.div
+                                                      whileTap={{ scale: 0.75 }}
+                                                      className="shop-actions"
+                                                    >
+                                                      <button
+                                                        style={{
+                                                          cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                          setItems([
+                                                            ...cartItemss,
+                                                            hel,
+                                                          ])
+                                                        }
+                                                      >
+                                                        <img src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/shopping-cart-20.png" />
+                                                        Add to Cart
+                                                      </button>
+                                                    </motion.div>
+                                                  </div>
+                                                  <div className="preview">
+                                                    <svg
+                                                      className="svg"
+                                                      viewBox="0 0 200 200"
+                                                      // xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <circle
+                                                        className="circle"
+                                                        cx={100}
+                                                        cy={100}
+                                                        r={100}
+                                                      />
+                                                      <image
+                                                        className="image"
+                                                        xlinkHref={hel.image}
+                                                        x={0}
+                                                        y={0}
+                                                        width="200px"
+                                                        height="180px"
+                                                      />
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                        {/* Pagination start */}
+                                        <div className="pagination-bx clearfix text-center">
+                                          <ul className="pagination">
+                                            <li className="previous">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-left" />
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">1</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">2</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">
+                                                ...
+                                              </a>
+                                            </li>
+                                            <li className="active">
+                                              <a href="javascript:void(0)">7</a>
+                                            </li>
+                                            <li className="next">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-right" />
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        {/* Pagination END */}
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="sticky-top">
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title m-b30">
+                                              Filter By
+                                            </h4>
+                                            <form>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="What are your looking for?"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Your location"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <select>
+                                                  <option> Category</option>
+                                                  <option>
+                                                    ConstrSelectuction
+                                                  </option>
+                                                  <option>Corodinator</option>
+                                                  <option>Employer</option>
+                                                  <option>
+                                                    Financial Career
+                                                  </option>
+                                                  <option>
+                                                    Information Technology
+                                                  </option>
+                                                  <option>Marketing</option>
+                                                  <option>Quality check</option>
+                                                  <option>Real Estate</option>
+                                                  <option>Sales</option>
+                                                  <option>Supporting</option>
+                                                  <option>Teaching</option>
+                                                </select>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title">
+                                              Filter By Tag
+                                            </h4>
+                                            <div className="widget_tag">
+                                              <ul className="m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Travel
+                                                  </a>{" "}
+                                                  (28+)
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Foods
+                                                  </a>{" "}
+                                                  (39+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Rivery
+                                                  </a>{" "}
+                                                  (76+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Organic
+                                                  </a>{" "}
+                                                  (47+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Medicine
+                                                  </a>{" "}
+                                                  (36+){" "}
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div className="add p-tb30">
+                                            <img
+                                              src="images/add/add1.jpg"
+                                              alt=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* contact area END */}
+                            </div>
+                          </div>
+                        ) : index == 1 ? (
+                          <div className="modal-body">
+                            <div className="page-content bg-white">
+                              {/* inner page banner */}
+                              <div
+                                className="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+                                style={{
+                                  backgroundImage: `url("/images/banner/banner2.jpg")`,
+                                }}
+                              >
+                                <div className="container">
+                                  <div className="dlab-bnr-inr-entry">
+                                    <h1 className="text-white">{hell.name}</h1>
+
+                                    {/* Breadcrumb row */}
+                                    <div className="breadcrumb-row">
+                                      <ul className="list-inline">
+                                        <li>
+                                          <a href="index.html">Home</a>
+                                        </li>
+                                        <li
+                                          style={{
+                                            textTransform: "capitalize",
+                                          }}
+                                        >
+                                          {hell.name}{" "}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    {/* Breadcrumb row END */}
+                                  </div>
+                                </div>
+                              </div>
+                              {/* inner page banner END */}
+                              {/* contact area */}
+                              <div className="content-block">
+                                <div className="section-full content-inner bg-white">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-lg-8 col-md-6">
+                                        <div className="listing-filter m-b40">
+                                          <div className="d-flex">
+                                            <div className="mr-auto">
+                                              <ul className="filter m-b0">
+                                                <li>
+                                                  <select>
+                                                    <option>
+                                                      More Filters
+                                                    </option>
+                                                    <option>
+                                                      Construction
+                                                    </option>
+                                                    <option>Corodinator</option>
+                                                    <option>Employer</option>
+                                                    <option>
+                                                      Financial Career
+                                                    </option>
+                                                    <option>
+                                                      Information Technology
+                                                    </option>
+                                                    <option>Marketing</option>
+                                                    <option>
+                                                      Quality check
+                                                    </option>
+                                                    <option>Real Estate</option>
+                                                    <option>Sales</option>
+                                                    <option>Supporting</option>
+                                                    <option>Teaching</option>
+                                                  </select>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            <div>
+                                              <ul className="filter-icon m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th" />
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th-list" />
+                                                  </a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="row">
+                                          {product.map((hel, index) => {
+                                            return (
+                                              <div
+                                                className="col-lg-12 col-md-12 col-sm-6 m-b30"
+                                                key={index}
+                                              >
+                                                <div
+                                                  className="product"
+                                                  style={{
+                                                    scrollBehavior: "smooth",
+                                                  }}
+                                                >
+                                                  <div className="title">
+                                                    {hel.name}
+                                                  </div>
+                                                  <div className="text">
+                                                    <div className="code">
+                                                      {hel.id}
+                                                    </div>
+                                                    <div className="description">
+                                                      The ultimate medium to
+                                                      super-telephoto zoom lens.
+                                                    </div>
+                                                    <div className="review">
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon star-disable" />
+                                                      <span className="star-reviews">
+                                                        84 reviews
+                                                      </span>
+                                                    </div>
+                                                    <div className="price">
+                                                      <i className="fa fa-rupee">
+                                                        {hel.price}
+                                                      </i>
+                                                    </div>
+                                                    <motion.div
+                                                      whileTap={{ scale: 0.75 }}
+                                                      className="shop-actions"
+                                                    >
+                                                      <button
+                                                        style={{
+                                                          cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                          setItems([
+                                                            ...cartItemss,
+                                                            hel,
+                                                          ])
+                                                        }
+                                                      >
+                                                        <img src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/shopping-cart-20.png" />
+                                                        Add to Cart
+                                                      </button>
+                                                    </motion.div>
+                                                  </div>
+                                                  <div className="preview">
+                                                    <svg
+                                                      className="svg"
+                                                      viewBox="0 0 200 200"
+                                                      // xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <circle
+                                                        className="circle"
+                                                        cx={100}
+                                                        cy={100}
+                                                        r={100}
+                                                      />
+                                                      <image
+                                                        className="image"
+                                                        xlinkHref={hel.image}
+                                                        x={0}
+                                                        y={0}
+                                                        width="200px"
+                                                        height="180px"
+                                                      />
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                        {/* Pagination start */}
+                                        <div className="pagination-bx clearfix text-center">
+                                          <ul className="pagination">
+                                            <li className="previous">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-left" />
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">1</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">2</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">
+                                                ...
+                                              </a>
+                                            </li>
+                                            <li className="active">
+                                              <a href="javascript:void(0)">7</a>
+                                            </li>
+                                            <li className="next">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-right" />
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        {/* Pagination END */}
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="sticky-top">
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title m-b30">
+                                              Filter By
+                                            </h4>
+                                            <form>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="What are your looking for?"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Your location"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <select>
+                                                  <option> Category</option>
+                                                  <option>
+                                                    ConstrSelectuction
+                                                  </option>
+                                                  <option>Corodinator</option>
+                                                  <option>Employer</option>
+                                                  <option>
+                                                    Financial Career
+                                                  </option>
+                                                  <option>
+                                                    Information Technology
+                                                  </option>
+                                                  <option>Marketing</option>
+                                                  <option>Quality check</option>
+                                                  <option>Real Estate</option>
+                                                  <option>Sales</option>
+                                                  <option>Supporting</option>
+                                                  <option>Teaching</option>
+                                                </select>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title">
+                                              Filter By Tag
+                                            </h4>
+                                            <div className="widget_tag">
+                                              <ul className="m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Travel
+                                                  </a>{" "}
+                                                  (28+)
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Foods
+                                                  </a>{" "}
+                                                  (39+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Rivery
+                                                  </a>{" "}
+                                                  (76+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Organic
+                                                  </a>{" "}
+                                                  (47+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Medicine
+                                                  </a>{" "}
+                                                  (36+){" "}
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div className="add p-tb30">
+                                            <img
+                                              src="images/add/add1.jpg"
+                                              alt=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* contact area END */}
+                            </div>
+                          </div>
+                        ) : index == 2 ? (
+                          <div className="modal-body">
+                            <div className="page-content bg-white">
+                              {/* inner page banner */}
+                              <div
+                                className="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+                                style={{
+                                  backgroundImage: `url("/images/banner/banner3.jpg")`,
+                                }}
+                              >
+                                <div className="container">
+                                  <div className="dlab-bnr-inr-entry">
+                                    <h1 className="text-white">{hell.name}</h1>
+
+                                    {/* Breadcrumb row */}
+                                    <div className="breadcrumb-row">
+                                      <ul className="list-inline">
+                                        <li>
+                                          <a href="index.html">Home</a>
+                                        </li>
+                                        <li
+                                          style={{
+                                            textTransform: "capitalize",
+                                          }}
+                                        >
+                                          {hell.name}{" "}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    {/* Breadcrumb row END */}
+                                  </div>
+                                </div>
+                              </div>
+                              {/* inner page banner END */}
+                              {/* contact area */}
+                              <div className="content-block">
+                                <div className="section-full content-inner bg-white">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-lg-8 col-md-6">
+                                        <div className="listing-filter m-b40">
+                                          <div className="d-flex">
+                                            <div className="mr-auto">
+                                              <ul className="filter m-b0">
+                                                <li>
+                                                  <select>
+                                                    <option>
+                                                      More Filters
+                                                    </option>
+                                                    <option>
+                                                      Construction
+                                                    </option>
+                                                    <option>Corodinator</option>
+                                                    <option>Employer</option>
+                                                    <option>
+                                                      Financial Career
+                                                    </option>
+                                                    <option>
+                                                      Information Technology
+                                                    </option>
+                                                    <option>Marketing</option>
+                                                    <option>
+                                                      Quality check
+                                                    </option>
+                                                    <option>Real Estate</option>
+                                                    <option>Sales</option>
+                                                    <option>Supporting</option>
+                                                    <option>Teaching</option>
+                                                  </select>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            <div>
+                                              <ul className="filter-icon m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th" />
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th-list" />
+                                                  </a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="row">
+                                          {product.map((hel, index) => {
+                                            return (
+                                              <div
+                                                className="col-lg-12 col-md-12 col-sm-6 m-b30"
+                                                key={index}
+                                              >
+                                                <div
+                                                  className="product"
+                                                  style={{
+                                                    scrollBehavior: "smooth",
+                                                  }}
+                                                >
+                                                  <div className="title">
+                                                    {hel.name}
+                                                  </div>
+                                                  <div className="text">
+                                                    <div className="code">
+                                                      {hel.id}
+                                                    </div>
+                                                    <div className="description">
+                                                      The ultimate medium to
+                                                      super-telephoto zoom lens.
+                                                    </div>
+                                                    <div className="review">
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon star-disable" />
+                                                      <span className="star-reviews">
+                                                        84 reviews
+                                                      </span>
+                                                    </div>
+                                                    <div className="price">
+                                                      <i className="fa fa-rupee">
+                                                        {hel.price}
+                                                      </i>
+                                                    </div>
+                                                    <motion.div
+                                                      whileTap={{ scale: 0.75 }}
+                                                      className="shop-actions"
+                                                    >
+                                                      <button
+                                                        style={{
+                                                          cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                          setItems([
+                                                            ...cartItemss,
+                                                            hel,
+                                                          ])
+                                                        }
+                                                      >
+                                                        <img src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/shopping-cart-20.png" />
+                                                        Add to Cart
+                                                      </button>
+                                                    </motion.div>
+                                                  </div>
+                                                  <div className="preview">
+                                                    <svg
+                                                      className="svg"
+                                                      viewBox="0 0 200 200"
+                                                      // xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <circle
+                                                        className="circle"
+                                                        cx={100}
+                                                        cy={100}
+                                                        r={100}
+                                                      />
+                                                      <image
+                                                        className="image"
+                                                        xlinkHref={hel.image}
+                                                        x={0}
+                                                        y={0}
+                                                        width="200px"
+                                                        height="180px"
+                                                      />
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                        {/* Pagination start */}
+                                        <div className="pagination-bx clearfix text-center">
+                                          <ul className="pagination">
+                                            <li className="previous">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-left" />
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">1</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">2</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">
+                                                ...
+                                              </a>
+                                            </li>
+                                            <li className="active">
+                                              <a href="javascript:void(0)">7</a>
+                                            </li>
+                                            <li className="next">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-right" />
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        {/* Pagination END */}
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="sticky-top">
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title m-b30">
+                                              Filter By
+                                            </h4>
+                                            <form>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="What are your looking for?"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Your location"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <select>
+                                                  <option> Category</option>
+                                                  <option>
+                                                    ConstrSelectuction
+                                                  </option>
+                                                  <option>Corodinator</option>
+                                                  <option>Employer</option>
+                                                  <option>
+                                                    Financial Career
+                                                  </option>
+                                                  <option>
+                                                    Information Technology
+                                                  </option>
+                                                  <option>Marketing</option>
+                                                  <option>Quality check</option>
+                                                  <option>Real Estate</option>
+                                                  <option>Sales</option>
+                                                  <option>Supporting</option>
+                                                  <option>Teaching</option>
+                                                </select>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title">
+                                              Filter By Tag
+                                            </h4>
+                                            <div className="widget_tag">
+                                              <ul className="m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Travel
+                                                  </a>{" "}
+                                                  (28+)
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Foods
+                                                  </a>{" "}
+                                                  (39+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Rivery
+                                                  </a>{" "}
+                                                  (76+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Organic
+                                                  </a>{" "}
+                                                  (47+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Medicine
+                                                  </a>{" "}
+                                                  (36+){" "}
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div className="add p-tb30">
+                                            <img
+                                              src="images/add/add1.jpg"
+                                              alt=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* contact area END */}
+                            </div>
+                          </div>
+                        ) : index == 3 ? (
+                          <div className="modal-body">
+                            <div className="page-content bg-white">
+                              {/* inner page banner */}
+                              <div
+                                className="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+                                style={{
+                                  backgroundImage: `url("/images/banner/banner4.jpg")`,
+                                }}
+                              >
+                                <div className="container">
+                                  <div className="dlab-bnr-inr-entry">
+                                    <h1 className="text-white">{hell.name}</h1>
+
+                                    {/* Breadcrumb row */}
+                                    <div className="breadcrumb-row">
+                                      <ul className="list-inline">
+                                        <li>
+                                          <a href="index.html">Home</a>
+                                        </li>
+                                        <li
+                                          style={{
+                                            textTransform: "capitalize",
+                                          }}
+                                        >
+                                          {hell.name}{" "}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    {/* Breadcrumb row END */}
+                                  </div>
+                                </div>
+                              </div>
+                              {/* inner page banner END */}
+                              {/* contact area */}
+                              <div className="content-block">
+                                <div className="section-full content-inner bg-white">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-lg-8 col-md-6">
+                                        <div className="listing-filter m-b40">
+                                          <div className="d-flex">
+                                            <div className="mr-auto">
+                                              <ul className="filter m-b0">
+                                                <li>
+                                                  <select>
+                                                    <option>
+                                                      More Filters
+                                                    </option>
+                                                    <option>
+                                                      Construction
+                                                    </option>
+                                                    <option>Corodinator</option>
+                                                    <option>Employer</option>
+                                                    <option>
+                                                      Financial Career
+                                                    </option>
+                                                    <option>
+                                                      Information Technology
+                                                    </option>
+                                                    <option>Marketing</option>
+                                                    <option>
+                                                      Quality check
+                                                    </option>
+                                                    <option>Real Estate</option>
+                                                    <option>Sales</option>
+                                                    <option>Supporting</option>
+                                                    <option>Teaching</option>
+                                                  </select>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            <div>
+                                              <ul className="filter-icon m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th" />
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th-list" />
+                                                  </a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="row">
+                                          {product.map((hel, index) => {
+                                            return (
+                                              <div
+                                                className="col-lg-12 col-md-12 col-sm-6 m-b30"
+                                                key={index}
+                                              >
+                                                <div
+                                                  className="product"
+                                                  style={{
+                                                    scrollBehavior: "smooth",
+                                                  }}
+                                                >
+                                                  <div className="title">
+                                                    {hel.name}
+                                                  </div>
+                                                  <div className="text">
+                                                    <div className="code">
+                                                      {hel.id}
+                                                    </div>
+                                                    <div className="description">
+                                                      The ultimate medium to
+                                                      super-telephoto zoom lens.
+                                                    </div>
+                                                    <div className="review">
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon star-disable" />
+                                                      <span className="star-reviews">
+                                                        84 reviews
+                                                      </span>
+                                                    </div>
+                                                    <div className="price">
+                                                      <i className="fa fa-rupee">
+                                                        {hel.price}
+                                                      </i>
+                                                    </div>
+                                                    <motion.div
+                                                      whileTap={{ scale: 0.75 }}
+                                                      className="shop-actions"
+                                                    >
+                                                      <button
+                                                        style={{
+                                                          cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                          setItems([
+                                                            ...cartItemss,
+                                                            hel,
+                                                          ])
+                                                        }
+                                                      >
+                                                        <img src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/shopping-cart-20.png" />
+                                                        Add to Cart
+                                                      </button>
+                                                    </motion.div>
+                                                  </div>
+                                                  <div className="preview">
+                                                    <svg
+                                                      className="svg"
+                                                      viewBox="0 0 200 200"
+                                                      // xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <circle
+                                                        className="circle"
+                                                        cx={100}
+                                                        cy={100}
+                                                        r={100}
+                                                      />
+                                                      <image
+                                                        className="image"
+                                                        xlinkHref={hel.image}
+                                                        x={0}
+                                                        y={0}
+                                                        width="200px"
+                                                        height="180px"
+                                                      />
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                        {/* Pagination start */}
+                                        <div className="pagination-bx clearfix text-center">
+                                          <ul className="pagination">
+                                            <li className="previous">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-left" />
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">1</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">2</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">
+                                                ...
+                                              </a>
+                                            </li>
+                                            <li className="active">
+                                              <a href="javascript:void(0)">7</a>
+                                            </li>
+                                            <li className="next">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-right" />
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        {/* Pagination END */}
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="sticky-top">
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title m-b30">
+                                              Filter By
+                                            </h4>
+                                            <form>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="What are your looking for?"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Your location"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <select>
+                                                  <option> Category</option>
+                                                  <option>
+                                                    ConstrSelectuction
+                                                  </option>
+                                                  <option>Corodinator</option>
+                                                  <option>Employer</option>
+                                                  <option>
+                                                    Financial Career
+                                                  </option>
+                                                  <option>
+                                                    Information Technology
+                                                  </option>
+                                                  <option>Marketing</option>
+                                                  <option>Quality check</option>
+                                                  <option>Real Estate</option>
+                                                  <option>Sales</option>
+                                                  <option>Supporting</option>
+                                                  <option>Teaching</option>
+                                                </select>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title">
+                                              Filter By Tag
+                                            </h4>
+                                            <div className="widget_tag">
+                                              <ul className="m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Travel
+                                                  </a>{" "}
+                                                  (28+)
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Foods
+                                                  </a>{" "}
+                                                  (39+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Rivery
+                                                  </a>{" "}
+                                                  (76+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Organic
+                                                  </a>{" "}
+                                                  (47+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Medicine
+                                                  </a>{" "}
+                                                  (36+){" "}
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div className="add p-tb30">
+                                            <img
+                                              src="images/add/add1.jpg"
+                                              alt=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* contact area END */}
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="modal-body">
+                            <div className="page-content bg-white">
+                              {/* inner page banner */}
+                              <div
+                                className="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+                                style={{
+                                  backgroundImage: `url("/images/banner/banner5.jpg")`,
+                                }}
+                              >
+                                <div className="container">
+                                  <div className="dlab-bnr-inr-entry">
+                                    <h1 className="text-white">{hell.name}</h1>
+
+                                    {/* Breadcrumb row */}
+                                    <div className="breadcrumb-row">
+                                      <ul className="list-inline">
+                                        <li>
+                                          <a href="index.html">Home</a>
+                                        </li>
+                                        <li
+                                          style={{
+                                            textTransform: "capitalize",
+                                          }}
+                                        >
+                                          {hell.name}{" "}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    {/* Breadcrumb row END */}
+                                  </div>
+                                </div>
+                              </div>
+                              {/* inner page banner END */}
+                              {/* contact area */}
+                              <div className="content-block">
+                                <div className="section-full content-inner bg-white">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-lg-8 col-md-6">
+                                        <div className="listing-filter m-b40">
+                                          <div className="d-flex">
+                                            <div className="mr-auto">
+                                              <ul className="filter m-b0">
+                                                <li>
+                                                  <select>
+                                                    <option>
+                                                      More Filters
+                                                    </option>
+                                                    <option>
+                                                      Construction
+                                                    </option>
+                                                    <option>Corodinator</option>
+                                                    <option>Employer</option>
+                                                    <option>
+                                                      Financial Career
+                                                    </option>
+                                                    <option>
+                                                      Information Technology
+                                                    </option>
+                                                    <option>Marketing</option>
+                                                    <option>
+                                                      Quality check
+                                                    </option>
+                                                    <option>Real Estate</option>
+                                                    <option>Sales</option>
+                                                    <option>Supporting</option>
+                                                    <option>Teaching</option>
+                                                  </select>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            <div>
+                                              <ul className="filter-icon m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th" />
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0)">
+                                                    <i className="fa fa-th-list" />
+                                                  </a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="row">
+                                          {product.map((hel, index) => {
+                                            return (
+                                              <div
+                                                className="col-lg-12 col-md-12 col-sm-6 m-b30"
+                                                key={index}
+                                              >
+                                                <div
+                                                  className="product"
+                                                  style={{
+                                                    scrollBehavior: "smooth",
+                                                  }}
+                                                >
+                                                  <div className="title">
+                                                    {hel.name}
+                                                  </div>
+                                                  <div className="text">
+                                                    <div className="code">
+                                                      {hel.id}
+                                                    </div>
+                                                    <div className="description">
+                                                      The ultimate medium to
+                                                      super-telephoto zoom lens.
+                                                    </div>
+                                                    <div className="review">
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon" />
+                                                      <span className="star-icon star-disable" />
+                                                      <span className="star-reviews">
+                                                        84 reviews
+                                                      </span>
+                                                    </div>
+                                                    <div className="price">
+                                                      <i className="fa fa-rupee">
+                                                        {hel.price}
+                                                      </i>
+                                                    </div>
+                                                    <motion.div
+                                                      whileTap={{ scale: 0.75 }}
+                                                      className="shop-actions"
+                                                    >
+                                                      <button
+                                                        style={{
+                                                          cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                          setItems([
+                                                            ...cartItemss,
+                                                            hel,
+                                                          ])
+                                                        }
+                                                      >
+                                                        <img src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/shopping-cart-20.png" />
+                                                        Add to Cart
+                                                      </button>
+                                                    </motion.div>
+                                                  </div>
+                                                  <div className="preview">
+                                                    <svg
+                                                      className="svg"
+                                                      viewBox="0 0 200 200"
+                                                      // xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <circle
+                                                        className="circle"
+                                                        cx={100}
+                                                        cy={100}
+                                                        r={100}
+                                                      />
+                                                      <image
+                                                        className="image"
+                                                        xlinkHref={hel.image}
+                                                        x={0}
+                                                        y={0}
+                                                        width="200px"
+                                                        height="180px"
+                                                      />
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                        {/* Pagination start */}
+                                        <div className="pagination-bx clearfix text-center">
+                                          <ul className="pagination">
+                                            <li className="previous">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-left" />
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">1</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">2</a>
+                                            </li>
+                                            <li>
+                                              <a href="javascript:void(0)">
+                                                ...
+                                              </a>
+                                            </li>
+                                            <li className="active">
+                                              <a href="javascript:void(0)">7</a>
+                                            </li>
+                                            <li className="next">
+                                              <a href="javascript:void(0)">
+                                                <i className="fa fa-arrow-right" />
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        {/* Pagination END */}
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="sticky-top">
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title m-b30">
+                                              Filter By
+                                            </h4>
+                                            <form>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="What are your looking for?"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <div className="input-group">
+                                                  <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Your location"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div className="form-group">
+                                                <select>
+                                                  <option> Category</option>
+                                                  <option>
+                                                    ConstrSelectuction
+                                                  </option>
+                                                  <option>Corodinator</option>
+                                                  <option>Employer</option>
+                                                  <option>
+                                                    Financial Career
+                                                  </option>
+                                                  <option>
+                                                    Information Technology
+                                                  </option>
+                                                  <option>Marketing</option>
+                                                  <option>Quality check</option>
+                                                  <option>Real Estate</option>
+                                                  <option>Sales</option>
+                                                  <option>Supporting</option>
+                                                  <option>Teaching</option>
+                                                </select>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="listing-filter-sidebar">
+                                            <h4 className="title">
+                                              Filter By Tag
+                                            </h4>
+                                            <div className="widget_tag">
+                                              <ul className="m-b0">
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Travel
+                                                  </a>{" "}
+                                                  (28+)
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Foods
+                                                  </a>{" "}
+                                                  (39+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Rivery
+                                                  </a>{" "}
+                                                  (76+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Organic
+                                                  </a>{" "}
+                                                  (47+){" "}
+                                                </li>
+                                                <li>
+                                                  <a href="javascript:void(0);">
+                                                    Medicine
+                                                  </a>{" "}
+                                                  (36+){" "}
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div className="add p-tb30">
+                                            <img
+                                              src="images/add/add1.jpg"
+                                              alt=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* contact area END */}
+                            </div>
+                          </div>
+                        )}
+
+                        <div className="modal-footer">
+                          <button
+                            type="button"
+                            className="btn btn-secondary"
+                            data-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
