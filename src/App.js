@@ -12,6 +12,7 @@ import OurServiceScreen from "./screens/OurServiceScreen";
 import TopTredingProductScreen from "./screens/TopTredingProductScreen";
 import NewProductPage from "./ProductDetail/NewProductPage";
 import CartPage from "./CartPage/CartPage";
+import Location from "./Location/Location";
 
 
 // toggle login
@@ -54,6 +55,7 @@ function App(props) {
 
           {/* cart pagfes royting */}
          <Route path="/cart-page" element={<CartPage/>}/>
+         <Route path="/loaction" element={<Location/>}/>
           
 
          

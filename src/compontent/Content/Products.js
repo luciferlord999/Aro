@@ -133,12 +133,12 @@ function Products() {
                 >
                   <div className="row product-grid-4">
                     {!loader
-                    ? post?.map((data, index) => {
+                    ? post?.map((data, indexs) => {
                           return (
                             <>
                               <div
                                 className="col-lg-1-5 col-md-4 col-12 col-sm-6  " 
-                                key={index}
+                                key={indexs}
                               >
                                 <div
                                   className="product-cart-wrap mb-30 wow animate__ animate__fadeIn animated  shadow-lgs"

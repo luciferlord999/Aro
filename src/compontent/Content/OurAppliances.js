@@ -47,10 +47,10 @@ function OurAppliances() {
     responsiveClass: true,
     dots: false,
     nav: true,
-    autoplay: true, 
-    
+    autoplay: true,
+
     smartSpeed: 1000,
-    responsive:{
+    responsive: {
       0: {
         items: 1,
       },
@@ -66,8 +66,8 @@ function OurAppliances() {
       },
       1000: {
         items: 3,
-      }
-    }
+      },
+    },
   };
 
   // Slider Cart   product end
@@ -86,36 +86,34 @@ function OurAppliances() {
             <div className="row">
               <div className="bodysf">
                 <div className="containersf">
-                  <OwlCarousel  {...options}
+                  <OwlCarousel
+                    {...options}
                     className="slider-items owl-theme owl-carousel  "
-                   
                   >
-                    {
-                      post?.map((data, index) => {
-                        return (
-                          <>
-                            <div className=" cardsf item" key={index}>
-                              <div className="boxsf shadow-lgs">
-                                <div className="contentsf">
-                                  <img
-                                    src={`http://3.110.38.250/${data.image}`}
-                                    alt=""
-                                  />
-                                  <p className="text-center prosx">
-                                    {data.category_title}
-                                  </p>
-                                  <Link
-                                    to={`/our-apliances/${data.category_url}`}
-                                  >
-                                    View{" "}
-                                  </Link>
-                                </div>
+                    {post?.map((data, index) => {
+                      return (
+                        <>
+                          <div className=" cardsf item" key={index}>
+                            <div className="boxsf shadow-lgs">
+                              <div className="contentsf">
+                                <img
+                                  src={`http://3.110.38.250/${data.image}`}
+                                  alt=""
+                                />
+                                <p className="text-center prosx">
+                                  {data.category_title}
+                                </p>
+                                <Link
+                                  to={`/our-apliances/${data.category_url}`}
+                                >
+                                  View{" "}
+                                </Link>
                               </div>
                             </div>
-                          </>
-                        );
-                      })
-                    }
+                          </div>
+                        </>
+                      );
+                    })}
                   </OwlCarousel>
 
                   {/*                

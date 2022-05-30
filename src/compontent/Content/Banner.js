@@ -17,7 +17,6 @@ function Banner() {
             <div className="search-filter filter-style1">
               <form>
                 <div className="input-group">
-                
                   <input
                     type="text"
                     className="form-control"
@@ -34,7 +33,6 @@ function Banner() {
                       <option>Supporting</option>
                       <option>Teaching</option>
                     </select>
-                  
                   </div>
                   <div className="input-group-prepend">
                     <button className="site-button"> Search</button>

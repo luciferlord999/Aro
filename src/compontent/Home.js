@@ -12,7 +12,9 @@ import Pss from "./Content/Pss";
 import Footers from "../Pages/ProductDetails/Footers";
 import LoadingBox from "../compontent/LoadingBox";
 import SkeletonOurApp from "../Skeleton/SkeletonOurApp";
-
+import axios from "axios";
+import { API_key } from "../Api/Api";
+import { API_endpoint } from "../Api/Api";
 
 //
 function Home() {
@@ -20,22 +22,63 @@ function Home() {
   const [scrollValue, setScrollValue] = useState(0);
 
   useEffect(() => {}, [scrollValue, cartShow]);
+
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitutde] = useState("");
+  const [location, sectLocation] = useState(null);
+
+  useEffect(() => {
+    navigator.geolocation.watchPosition((position) => {
+      setLatitude(position.coords.latitude);
+      setLongitutde(position.coords.longitude);
+      console.log(position.coords);
+    });
+    axios
+      .get(
+        `${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}`
+      )
+      .then((response) => {
+        sectLocation(response.data);
+        
+      });
+  }, [latitude, longitude]);
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
   return (
     <>
-      <div>
-        <Navbar />
-        <Banner />
-        <Content />
+      {/* 0 */}
+      
 
-        <Footers />
+      <Navbar />
+      <Banner />
+      <Content />
+      <Footers />
+     
 
-        <Pss />
-       
 
-        {cartShow && <CartItem />}
-        {cartShowA && <CartItemsAir />}
-        {/* <CartItemsAp/> */}
-      </div>
+      {cartShow && <CartItem />}
+      {cartShowA && <CartItemsAir />}
     </>
   );
 }
