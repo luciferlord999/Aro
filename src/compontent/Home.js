@@ -21,60 +21,44 @@ function Home() {
   const [{ cartShow, cartShowA }, dispatch] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
 
-  useEffect(() => {}, [scrollValue, cartShow]);
-
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitutde] = useState("");
-  const [location, sectLocation] = useState(null);
-
-  useEffect(() => {
-    navigator.geolocation.watchPosition((position) => {
-      setLatitude(position.coords.latitude);
-      setLongitutde(position.coords.longitude);
-      console.log(position.coords);
-    });
-    axios
-      .get(
-        `${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}`
-      )
-      .then((response) => {
-        sectLocation(response.data);
-        
-      });
-  }, [latitude, longitude]);
-
-  
+  useEffect(() => { }, [scrollValue, cartShow]);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
   return (
     <>
       {/* 0 */}
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <Navbar />
-      <Banner />
+      <Banner  />
       <Content />
       <Footers />
-     
+
 
 
       {cartShow && <CartItem />}

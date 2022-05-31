@@ -12,7 +12,7 @@ function Location() {
     navigator.geolocation.getCurrentPosition((position) => {
       setLatitude(position.coords.latitude);
       setLongitutde(position.coords.longitude);
-      // console.log(position.coords);
+      console.log(position.coords);
     });
     axios
       .get(

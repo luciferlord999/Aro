@@ -13,7 +13,7 @@ import TopTredingProductScreen from "./screens/TopTredingProductScreen";
 import NewProductPage from "./ProductDetail/NewProductPage";
 import CartPage from "./CartPage/CartPage";
 import Location from "./Location/Location";
-
+import DefaultHome from "./compontent/DefaultHome";
 
 // toggle login
 
@@ -32,33 +32,30 @@ function App(props) {
 
         <Routes>
           <Route path="*" element={<Error />} />
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<DefaultHome />} />
           <Route path="/signup" element={<Signup />} />
-         
-          <Route path="/our-apliances/:category_url" element={<AirPurifier />} />
+
+          <Route
+            path="/our-apliances/:category_url"
+            element={<AirPurifier />}
+          />
           <Route path="/product-details" element={<ProductDetails />} />
-          <Route path="/product-details/:product_url" element={<TopTredingProductScreen />} />
+          <Route
+            path="/product-details/:product_url"
+            element={<TopTredingProductScreen />}
+          />
 
           {/* <Route
             path="/product-details"
             element={<ProductDetails />}
           /> */}
-          <Route
-            path="/product/:name/"
-            element={<OurServiceScreen />}
-            exact
-          />
+          <Route path="/product/:name/" element={<OurServiceScreen />} exact />
 
-          <Route path="/NewProductPage"
-            element={<NewProductPage/>}
-          />
+          <Route path="/NewProductPage" element={<NewProductPage />} />
 
           {/* cart pagfes royting */}
-         <Route path="/cart-page" element={<CartPage/>}/>
-         <Route path="/loaction" element={<Location/>}/>
-          
-
-         
+          <Route path="/cart-page" element={<CartPage />} />
+          <Route path="/loaction" element={<Location />} />
 
           <Route component={<Error />} />
         </Routes>
