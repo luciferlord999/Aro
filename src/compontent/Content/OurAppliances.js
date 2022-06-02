@@ -67,6 +67,9 @@ function OurAppliances() {
       1000: {
         items: 3,
       },
+      1024: {
+        items: 3,
+      },
     },
   };
 
@@ -76,7 +79,7 @@ function OurAppliances() {
   const [popup, setPopup] = useState(false);
   return (
     <>
-      <div className="section-full bg-gray content-inner about-us shadow-lg p-3 mb-5 bg-white rounded">
+      <div className="section-full bg-gray content-inner about-us ">
         <div className="container-fluid">
           <div className="section-head text-black text-center">
             <h2 className="box-title"> OUR APLLIANCES</h2>

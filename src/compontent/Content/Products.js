@@ -105,8 +105,8 @@ function Products() {
         setLoader(false);
       });
     }, 4000);
-    }, []);
-  
+  }, []);
+
 
   return (
     <>
@@ -133,116 +133,116 @@ function Products() {
                 >
                   <div className="row product-grid-4">
                     {!loader
-                    ? post?.map((data, indexs) => {
-                          return (
-                            <>
+                      ? post?.map((data, indexs) => {
+                        return (
+                          <>
+                            <div
+                              className="col-lg-1-5 col-md-4 col-12 col-sm-6  "
+                              key={indexs}
+                            >
                               <div
-                                className="col-lg-1-5 col-md-4 col-12 col-sm-6  " 
-                                key={indexs}
+                                className="product-cart-wrap mb-30 wow animate__ animate__fadeIn animated  shadow-lgs"
+                                data-wow-delay=".1s"
+                                style={{
+                                  visibility: "visible",
+                                  animationDelay: "0.1s",
+                                  animationName: "fadeIn",
+                                }}
                               >
-                                <div
-                                  className="product-cart-wrap mb-30 wow animate__ animate__fadeIn animated  shadow-lgs"
-                                  data-wow-delay=".1s"
-                                  style={{
-                                    visibility: "visible",
-                                    animationDelay: "0.1s",
-                                    animationName: "fadeIn",
-                                  }}
-                                >
-                                  <div className="product-img-action-wrap ">
-                                    <div className="product-img product-img-zoom">
-                                      <a href="/product-details">
-                                        <img
-                                          className="default-img"
-                                          src={`http://3.110.38.250/${data.product_image}`}
-                                          alt=""
-                                        />
-                                        <img
-                                          className="hover-img"
-                                          src={`http://3.110.38.250/${data.product_image}`}
-                                          alt=""
-                                        />
-                                      </a>
+                                <div className="product-img-action-wrap ">
+                                  <div className="product-img product-img-zoom">
+                                    <a href={`/product-details/${data.product_url}`}>
+                                      <img
+                                        className="default-img"
+                                        src={`http://3.110.38.250/${data.product_image}`}
+                                        alt=""
+                                      />
+                                      <img
+                                        className="hover-img"
+                                        src={`http://3.110.38.250/${data.product_image}`}
+                                        alt=""
+                                      />
+                                    </a>
+                                  </div>
+                                  <div className="product-action-1">
+                                    <Link
+                                      aria-label="Quick view"
+                                      className="action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#quickViewModal"
+                                      to={`/product-details/${data.product_url}`}
+                                    >
+                                      <i
+                                        className="fa fa-eye"
+                                        style={{ color: "#107cc4" }}
+                                      />
+                                    </Link>
+                                  </div>
+                                  <div className="product-badges product-badges-position product-badges-mrg">
+                                    <span className="sale">Sale</span>
+                                  </div>
+                                </div>
+                                <div className="product-content-wrap">
+                                  <h2 style={{ textTransform: "capitalize" }}>
+                                    <Link
+                                      to={`/product-details/${data.product_url}`}
+                                    >
+                                      {data.product_title}
+                                    </Link>
+                                  </h2>
+                                  <div className="product-rate-cover">
+                                    <div className="product-rate d-inline-block">
+                                      <div
+                                        className="product-rating"
+                                        style={{ width: "90%" }}
+                                      />
                                     </div>
-                                    <div className="product-action-1">
-                                      <Link
-                                        aria-label="Quick view"
-                                        className="action-btn"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#quickViewModal"
-                                        to={`/product-details/${data.product_url}`}
-                                      >
-                                        <i
-                                          className="fa fa-eye"
-                                          style={{ color: "#107cc4" }}
-                                        />
-                                      </Link>
-                                    </div>
-                                    <div className="product-badges product-badges-position product-badges-mrg">
-                                      <span className="sale">Sale</span>
+                                    <div className="rate">
+                                      <i className="fa fa-star" />
+                                      <i className="fa fa-star" />
+                                      <i className="fa fa-star" />
+                                      <i className="fa fa-star" />
+                                      <i className="fa fa-star-half" />
+                                      <i className="font-small ml-1 text-muted">
+                                        (4.0)
+                                      </i>
                                     </div>
                                   </div>
-                                  <div className="product-content-wrap">
-                                    <h2 style={{ textTransform: "capitalize" }}>
-                                      <Link
-                                        to={`/product-details/${data.product_url}`}
-                                      >
-                                        {data.product_title}
-                                      </Link>
-                                    </h2>
-                                    <div className="product-rate-cover">
-                                      <div className="product-rate d-inline-block">
-                                        <div
-                                          className="product-rating"
-                                          style={{ width: "90%" }}
-                                        />
-                                      </div>
-                                      <div className="rate">
-                                        <i className="fa fa-star" />
-                                        <i className="fa fa-star" />
-                                        <i className="fa fa-star" />
-                                        <i className="fa fa-star" />
-                                        <i className="fa fa-star-half" />
-                                        <i className="font-small ml-1 text-muted">
-                                          (4.0)
-                                        </i>
-                                      </div>
-                                    </div>
 
-                                    <div className="product-card-bottom">
-                                      <div className="product-price">
-                                        <span>
-                                          ₹
-                                          {data.product_price
-                                            .toString()
-                                            .replace(
-                                              /\B(?=(\d{3})+(?!\d))/g,
-                                              ","
-                                            )}{" "}
-                                          /-
-                                        </span>
-                                      </div>
-                                      <div className="add-cart">
-                                        <motion.a
-                                          whileTap={{ scale: 0.95 }}
-                                          className="add"
-                                          style={{ color: "#146285" }}
-                                          onClick={() =>
-                                            setItems([...cartItems, data])
-                                          }
-                                        >
-                                          <i className="fa fa-shopping-cart mr-1" />
-                                          Add to cart{" "}
-                                        </motion.a>
-                                      </div>
+                                  <div className="product-card-bottom">
+                                    <div className="product-price">
+                                      <span>
+                                        ₹
+                                        {data.product_price
+                                          .toString()
+                                          .replace(
+                                            /\B(?=(\d{3})+(?!\d))/g,
+                                            ","
+                                          )}{" "}
+                                        /-
+                                      </span>
+                                    </div>
+                                    <div className="add-cart">
+                                      <motion.a
+                                        whileTap={{ scale: 0.95 }}
+                                        className="add"
+                                        style={{ color: "#146285" }}
+                                        onClick={() =>
+                                          setItems([...cartItems, data])
+                                        }
+                                      >
+                                        <i className="fa fa-shopping-cart mr-1" />
+                                        Add to cart{" "}
+                                      </motion.a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </>
-                          );
-                        })
-                      : <SkeletonTrendingProduct/>}
+                            </div>
+                          </>
+                        );
+                      })
+                      : <SkeletonTrendingProduct />}
 
                     {/*end product card*/}
 

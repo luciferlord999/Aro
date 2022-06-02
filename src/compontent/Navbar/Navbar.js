@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Signup from "../../Pages/Signup";
 import { MdShoppingCart } from "react-icons/md";
 import { useStateValue } from "../StateProvider";
 import { actionType } from "../../Context/reducer";
+import NavbarCaro from "./NavbarCaro";
+import axios from "axios";
+import BassURl from "../../Api/Api";
 
 function Navbar() {
   const [{ user, cartShow, cartItems }, dispatch] = useStateValue();
@@ -13,6 +16,19 @@ function Navbar() {
       cartShow: !cartShow,
     });
   };
+
+
+  const [posets, setPosets] = useState(null);
+  useEffect(() => {
+    axios.get(`/web-api/all-service-category`).then((response) => {
+      setPosets(response.data.data);
+
+    });
+
+  }, []);
+
+
+
   return (
     <>
       <header className="site-header header-transparent mo-left">
@@ -44,7 +60,53 @@ function Navbar() {
                 <span />
               </button>
               {/* extra nav */}
-              <div className="extra-nav">
+
+              <div className="megaMenuHide" style={{}}>
+                {
+                  posets?.map((data, index) => {
+                    return (
+                      <div
+                        className="Grid__item--JyxXq SearchAndGridHeader__gridContainerClass--2ra3O"
+                        title={data?.service_title}
+                      >
+                        <div className="LazyLoadImage__imageContainer--3EOU_ Grid__imageContainer--1Fs8D SearchAndGridHeader__imageContainerClass--2nzhk">
+                          <div className="TemplateShimmer__shimmer--1HNwN TemplateShimmer__shimmerWrapper--Py2CJ TemplateShimmer__hidden--1oL9u" />
+                          <img
+                            className="Grid__image--IV0GE"
+                            src={BassURl + data?.service_img}
+                            alt=""
+                            itemScope=""
+                            itemProp="image"
+                          />
+                        </div>
+                        <span className="Grid__text--cEuUL SearchAndGridHeader__gridtextClass--35aaB">
+                          {data?.service_title}
+                        </span>
+                      </div>
+
+                    )
+                  })
+
+                }
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div className="extra-nav extra-navTop ">
                 <div className="extra-cell">
                   <a href="signup" className="site-button-link white">
                     <i className="ti-import m-r5 rotate90" /> Sign In
@@ -91,7 +153,28 @@ function Navbar() {
                 </ul>
               </div>
             </div>
+
+
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         {/* main header END */}
       </header>

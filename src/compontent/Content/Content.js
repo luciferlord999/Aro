@@ -191,31 +191,42 @@ function Content() {
   return (
     <>
       <div className="content-block">
-        <div
-          className="category-bx  bg-white shadow-lg p-3 mb-5 bg-white rounded"
-          style={{ marginTop: "160px", height: "220px" }}
-        >
-          {!loader ? (
-            posets?.map((get, index) => {
-              return (
-                <>
-                  <a
-                    href="listing-left-sidebar.html"
-                    className="category"
-                    key={index}
-                  >
-                    <img src={BassURl + get.service_img} alt="" />
-                    <p>{get.service_title}</p>
-                  </a>
-                </>
-              );
-            })
-          ) : (
-            <IconSkeleton />
-          )}
+
+        {/* <div className="hero-categories fl-wrap shadow bg-white rounded-3"><h1>hello</h1></div> */}
+        <div className="Icon_width">
+
+          <div
+            className="category-bx  bg-white shadow-lg p-3 mb-5 bg-white rounded"
+            style={{ marginTop: "160px", height: "220px" }}
+          >
+            {!loader ? (
+              posets?.map((get, index) => {
+                return (
+                  <>
+                    <a
+                      href="listing-left-sidebar.html"
+                      className="category"
+                      key={index}
+                    >
+                      <img src={BassURl + get.service_img} alt="" />
+                      <p>{get.service_title}</p>
+                    </a>
+                  </>
+                );
+              })
+            ) : (
+              <IconSkeleton />
+            )}
+          </div>
+
         </div>
+
+
+
+
+
         {/* Featured Destinations */}
-        <div className="section-full bg-white mt-10 content-inner shadow-lg p-3 mb-5 bg-white rounded">
+        <div className="section-full bg-white mt-10 content-inner ">
           <div className="container ">
             <div
               className="section-head text-black text-center "

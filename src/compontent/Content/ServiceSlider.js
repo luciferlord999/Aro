@@ -17,6 +17,7 @@ const options = {
   responsiveClass: true,
   dots: true,
   nav: true,
+  loop: true,
   autoplay: true,
   // autoWidth:true,
 
@@ -45,38 +46,33 @@ const img = [
     id: "1",
     name: "AC-Service",
     image:
-      "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/08/AC-3.png",
+      "/images/slider/4.webp",
   },
   {
     id: "2",
     name: "Handy-Man",
     image:
-      "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/08/AC-3.png",
+      "/images/slider/1.webp",
   },
   {
     id: "3",
     name: "Furniture-Assembly",
     image:
-      "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/08/AC-3.png",
+      "/images/slider/2.webp",
   },
   {
     id: "4",
     name: "Plumber",
     image:
-      "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/08/AC-3.png",
+      "/images/slider/3.webp",
   },
   {
     id: "5",
     name: "Lown-Mowing",
     image:
-      "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/08/AC-3.png",
+      "/images/slider/3.webp",
   },
-  {
-    id: "6",
-    name: "Lown-Mowing",
-    image:
-      "https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/08/AC-3.png",
-  },
+
   // {
   //   id: "7",
   //   name: "Lown Mowing",
@@ -100,7 +96,9 @@ function ServiceSlider(props) {
               {img.map((pic, index) => {
                 return (
                   <>
-                    <div className="col-log-4">
+                    <div className="col-log-4" style={{
+                      boxShadow: " 0 2px 5px 0 rgb(0 0 0 / 42%), 0 2px 10px 0 rgb(0 0 0 / 39%)"
+                    }}>
                       <div
                         className="item "
                         style={{ width: "500px !important" }}

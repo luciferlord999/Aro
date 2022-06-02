@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useStateValue } from "./StateProvider";
 import { actionType } from "../Context/reducer";
 import CartItemsR from "./CartItemsR";
+import { Link } from "react-router-dom";
 
 function CartItem() {
   //  hide and show add to cart
@@ -48,10 +49,10 @@ function CartItem() {
         "product_price": data.product_price,
         "product_id": data.brand_id,
         "product_image": data.product_image,
-        "product_Qty" :data.vendor_id,
-        "product_total_price":  data.vendor_id *data.product_price,
+        "product_Qty": data.vendor_id,
+        "product_total_price": data.vendor_id * data.product_price,
         "totle": tot,
-        
+
       };
 
       console.log(datas);
@@ -175,7 +176,7 @@ function CartItem() {
                 <p className="SubTotal">5.6</p>
               </div>
 
-              
+
 
               <div className="InTotal">
                 <p className="InTotalIn ">Total</p>
@@ -191,15 +192,21 @@ function CartItem() {
                   Login To Check Out
                 </motion.button>
               ) : (
-                <motion.button
-                  whileTap={{ scale: 0.95 }}
-                  type="button"
-                  className="Checkout shadow-lg"
-                  style={{cursor:"pointer"}}
-                  // onClick={cartDispatch}
-                >
-                 View Cart
-                </motion.button>
+                <Link to="/cart-page">
+                  <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    type="button"
+                    className="Checkout shadow-lg"
+                    style={{ cursor: "pointer" }}
+
+                  >
+
+                    View Cart
+                  </motion.button>
+                </Link >
+
+
+
               )}
             </div>
           </div>

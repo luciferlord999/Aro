@@ -11,7 +11,7 @@ function Banner(props) {
     navigator.geolocation.watchPosition((position) => {
       setLatitude(position.coords.latitude);
       setLongitutde(position.coords.longitude);
-      console.log(position.coords);
+      // console.log(position.coords);
     });
 
   }, []);
@@ -22,7 +22,7 @@ function Banner(props) {
         `${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}`
       )
       .then((response) => {
-        console.log(sectLocation(response.data));
+        sectLocation(response.data);
       });
 
     alert("hello")
@@ -35,7 +35,7 @@ function Banner(props) {
   return (
     <>
       <div className="page-content bg-white">
-        <div className="dlab-bnr-inr dlab-bnr-inr-md">
+        <div className="dlab-bnr-inr dlab-bnr-inr-md overlay-primary">
           <div className="container">
             {/* <div className="dlab-bnr-inr-entry align-m dlab-home bg">
               <img src="/images/banner/bnr.png)" alt="" />

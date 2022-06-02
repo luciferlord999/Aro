@@ -32,7 +32,7 @@ function App(props) {
 
         <Routes>
           <Route path="*" element={<Error />} />
-          <Route exact path="/" element={<DefaultHome />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
 
           <Route

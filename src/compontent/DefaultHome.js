@@ -23,24 +23,32 @@ function DefaultHome() {
     const [longitude, setLongitutde] = useState("");
     const [location, sectLocation] = useState(null);
 
+
+
     useEffect(() => {
         navigator.geolocation.watchPosition((position) => {
             setLatitude(position.coords.latitude);
             setLongitutde(position.coords.longitude);
-            console.log(position.coords);
+            // console.log(position.coords);
         });
+
+        // console.log(`${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}` , "location")
+
+        let finalAPIEndPoint = `${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}`
+
+
         axios
-            .get(
-                `${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}`
-            )
+            .get(`${API_endpoint}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_key}`)
             .then((response) => {
                 sectLocation(response.data);
+                console.log(response.data)
             });
     }, [latitude, longitude]);
+    // console.log(location?.name)
 
     return (
         <>
-            {location?.name == "Lucknow" ? (
+            {location?.name === "Lucknow" ? (
                 <>
                     <Home />
                 </>
@@ -51,10 +59,10 @@ function DefaultHome() {
                 // </div>
                 <>
                     <Navbar />
-                    <Banner   />
+                    <Banner />
                     {/* <Error/> */}
-                    
-                    <div className="section-full content-inner-2" style={{marginTop:"120px"}}>
+
+                    <div className="section-full content-inner-2" style={{ marginTop: "120px" }}>
                         <div className="container">
                             <div className>
                                 <div className="error-page">

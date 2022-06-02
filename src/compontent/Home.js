@@ -24,38 +24,26 @@ function Home() {
   useEffect(() => { }, [scrollValue, cartShow]);
 
 
+  // const [latitude, setLatitude] = useState("");
+  // const [longitude, setLongitutde] = useState("");
+  // const [location, sectLocation] = useState(null);
+  // navigator.geolocation.watchPosition((position) => {
+  //   setLatitude(position.coords.latitude);
+  //   setLongitutde(position.coords.longitude);
+  //   console.log(position.coords);
+  // });
+
+
+
+
+
   return (
     <>
       {/* 0 */}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <Navbar />
-      <Banner  />
+      <Banner />
       <Content />
       <Footers />
 
