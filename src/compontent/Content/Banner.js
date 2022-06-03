@@ -47,21 +47,28 @@ function Banner(props) {
             </div> */}
             <div className="search-filter filter-style1">
               <form>
+
+
+
                 <div className="input-group">
                   {/* <input
-                    type="text"
-                    className="form-control"
-                    placeholder="What are you looking for?"
-                  /> */}
+type="text"
+className="form-control"
+placeholder="What are you looking for?"
+/> */}
+
+
 
                   <input
 
-                    className="form-control"
+                    className="form-control iconss"
                     value={location?.name}
                     placeholder={"Lucknow"}
                   />
+                  
 
-                  {/* <div className="form-control">
+
+                  <div className="form-control">
                     <select className="bs-select-hidden">
                       <option>Select Category</option>
                       <option>Construction</option>
@@ -72,8 +79,8 @@ function Banner(props) {
                       <option>Supporting</option>
                       <option>Teaching</option>
                     </select>
-                    
-                  </div> */}
+
+                  </div>
                   <div className="input-group-prepend">
                     <button
                       type="button"
@@ -88,11 +95,12 @@ function Banner(props) {
 
 
                     >
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      Search
                     </button>
                   </div>
                 </div>
               </form>
+
             </div>
           </div>
         </div>

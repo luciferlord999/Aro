@@ -7,6 +7,9 @@ import { MdShoppingBasket } from "react-icons/md";
 import "react-toastify/dist/ReactToastify.css";
 import "./Pss.css";
 import axios from "axios";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link, useParams } from "react-router-dom";
 import SkeletonTrendingProduct from "../../Skeleton/SkeletonTrendingProduct";
 
@@ -110,7 +113,7 @@ function Products() {
 
   return (
     <>
-      <div className="section-full bg-gray content-inner about-us shadow-lgs p-3 mb-5 bg-white rounded  backgroundss">
+      <div className="section-full bg-gray content-inner about-us shadow-lg p-3 mt-5 bg-white rounded  backgroundss">
         <div className="container-fluid ">
           <div className="section-head text-black text-center">
             <h2 className="box-title"> TOP TRENDING PRODUCT</h2>
@@ -132,6 +135,27 @@ function Products() {
                   aria-labelledby="tab-one"
                 >
                   <div className="row product-grid-4">
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     {!loader
                       ? post?.map((data, indexs) => {
                         return (

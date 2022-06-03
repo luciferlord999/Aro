@@ -7,17 +7,21 @@ function Caro() {
 
   useEffect(() => {
     const getbanner = async () => {
-      const res = await fetch("http://3.110.38.250/web-api/banner",{
-        method:"GET",
-        mode:"cors"
+      const res = await fetch("http://3.110.38.250/web-api/banner", {
+        method: "GET",
+        mode: "cors"
       });
       const getbanner = await res.json();
-     
+
       setBanner(await getbanner);
-     
+
     };
     getbanner();
-  },[]);
+  }, []);
+
+
+  
+
 
 
   return (
@@ -25,31 +29,32 @@ function Caro() {
       <div
         id="carouselExampleControls"
         className="carousel slide"
-        data-ride="carousel"
+        data-ride="carousel" 
+       
       >
-        <div className="carousel-inner  shadow-lg p-3 mb-5 bg-white rounded  ">
+        <div className="carousel-inner  shadow-lg p-3 mt-5 bg-white rounded  ">
           {banner.code == 200
             ? banner.data.map((ban, index) => {
-               
-                return (
-                  <div
+
+              return (
+                <div
                   key={index}
-                    className={
-                      index == 0 ? "carousel-item active" : "carousel-item "
-                     }
-                  >
-                    <img
-                      className="d-block w-100"
-                      src={"http://3.110.38.250/" + ban.banner_url}
-                      alt="First slide"
+                  className={
+                    index == 0 ? "carousel-item active" : "carousel-item "
+                  }
+                >
+                  <img
+                    className="d-block w-100"
+                    src={"http://3.110.38.250/" + ban.banner_url}
+                    alt="First slide"
 
-                      style={{height:"500px"}}
+                    style={{ height: "500px" }}
 
 
-                    />
-                  </div>
-                );
-              })
+                  />
+                </div>
+              );
+            })
             : banner.msg}
         </div>
       </div>

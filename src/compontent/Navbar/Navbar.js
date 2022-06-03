@@ -42,7 +42,7 @@ function Navbar() {
                   <img src="/images/logo.png" alt />
                 </a>
                 <a href="/" className="logo-2">
-                  <img src="/images/logo.png" alt />
+                  <img src="/images/logo2.webp" alt />
                 </a>
               </div>
               {/* nav toggle button */}

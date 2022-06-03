@@ -7,6 +7,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import SliderApp from "./ourApplianceSlider/SliderApp";
+import BassURl from "../../Api/Api";
 
 function OurAppliances() {
   const breakPoints = [
@@ -42,12 +43,13 @@ function OurAppliances() {
   // Slider Cart   product start
 
   const options = {
-    loop: true,
+    loop: false,
     margin: 10,
     responsiveClass: true,
     dots: false,
     nav: true,
-    autoplay: true,
+    navText:["<div class='nav-button  owl-prev'></div>","<div class='nav-button owl-next'></div>"],
+    autoplay: false,
 
     smartSpeed: 1000,
     responsive: {
@@ -79,77 +81,71 @@ function OurAppliances() {
   const [popup, setPopup] = useState(false);
   return (
     <>
-      <div className="section-full bg-gray content-inner about-us ">
+      <div className="section-full  shadow-lg bg-white  mt-5  content-inner about-us ">
         <div className="container-fluid">
           <div className="section-head text-black text-center">
-            <h2 className="box-title"> OUR APLLIANCES</h2>
+            <h2 className="box-title" style={{ fontFamily: "'Lato', sans-serif", fontWeight: "500" }}> OUR APLLIANCES</h2>
             <div className="dlab-separator bg-primary" />
           </div>
           <div className="container mx-auto mt-4">
             <div className="row">
-              <div className="bodysf">
-                <div className="containersf">
-                  <OwlCarousel
-                    {...options}
-                    className="slider-items owl-theme owl-carousel  "
-                  >
-                    {post?.map((data, index) => {
-                      return (
-                        <>
-                          <div className=" cardsf item" key={index}>
-                            <div className="boxsf shadow-lgs">
-                              <div className="contentsf">
-                                <img
-                                  src={`http://3.110.38.250/${data.image}`}
-                                  alt=""
-                                />
-                                <p className="text-center prosx">
-                                  {data.category_title}
-                                </p>
-                                <Link
-                                  to={`/our-apliances/${data.category_url}`}
-                                >
-                                  View{" "}
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      );
-                    })}
-                  </OwlCarousel>
 
-                  {/*                
-                  {!loader ? (
+
+
+              
+
+                <OwlCarousel
+                  {...options}
+                  className="slider-items owl-theme owl-carousel  "
+                >
+
+                  {
                     post?.map((data, index) => {
                       return (
                         <>
-                          <div className=" cardsf" key={index}>
-                            <div className="boxsf shadow-lgs">
-                              <div className="contentsf">
-                                <img
-                                  src={`http://3.110.38.250/${data.image}`}
-                                  alt=""
-                                />
-                                <p className="text-center prosx">
-                                  {data.category_title}
-                                </p>
-                                <Link
-                                  to={`/our-apliances/${data.category_url}`}
-                                >
-                                  View{" "}
-                                </Link>
+                          <div className="cardtr">
+                            <div className="card-headertr">
+                              <img src={BassURl + data?.image} alt="user" />
+                            </div>
+                            <div className="card-bodytr">
+
+
+                              <h5 className='Heading-6' style={{ textTransform: " uppercase" }}>
+                                {data?.category_title}
+                              </h5>
+
+
+
+
+                              <div className="usertr">
+                                &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;
+                                <div className="user-infotr">
+                                  <a href="/our-apliances/air-purifier">View </a>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </>
-                      );
+                      )
                     })
-                  ) : (
-                    <SkeletonOurApp />
-                  )} */}
-                </div>
-              </div>
+
+                  }
+
+
+
+
+                </OwlCarousel>
+
+
+
+
+
+
+
+             
+
+
+              
             </div>
           </div>
         </div>

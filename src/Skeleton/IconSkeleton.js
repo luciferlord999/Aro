@@ -18,8 +18,8 @@ function IconSkeleton() {
   return (
     <>
       <SkeletonTheme
-        baseColor="#c0e8ff"
-        highlightColor="rgb(93 160 241 / 38%)"
+        // baseColor="#606269"
+        // highlightColor="rgb(93 160 241 / 38%)"
         borderRadius="0.5rem"
         duration={2}
       >
@@ -28,13 +28,13 @@ function IconSkeleton() {
             <>
               <div  style={{    marginTop: "30px"}}>
                 <a
-                style={{marginRight:"180px"}}
+                style={{marginRight:"175px"}}
                  
                
                 
                  
                 >
-                  <Skeleton height={"120px"} width={"165px"} />
+                  <Skeleton height={"95px"} width={"170px"} />
                  
                   &nbsp;
                 </a>

@@ -75,7 +75,7 @@
 }
 
 .category-bx .category {
-    height: 129px;
+    height: 100px;
     color: #000;
     width: 170px;
     text-align: center;
@@ -94,7 +94,7 @@
 
 .category-bx .category:hover {
     background: #fff;
-    color: #4611a7;
+    color: #2b8eeb;
 }
 
 .category-bx .category p {
@@ -2096,6 +2096,7 @@ blockquote h6 {
 .search-filter.filter-style1 form .form-control:first-child {
     border-radius: 50px 0 0 50px !important;
 }
+
 
 .search-filter.filter-style1 form .input-group-prepend .site-button {
     border-radius: 0 50px 50px 0;

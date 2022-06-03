@@ -148,6 +148,7 @@ function Content() {
     //   setPost(response.data.data);
     // });
   }, []);
+  
 
   var settings = {
     dots: false,
@@ -197,7 +198,7 @@ function Content() {
 
           <div
             className="category-bx  bg-white shadow-lg p-3 mb-5 bg-white rounded"
-            style={{ marginTop: "160px", height: "220px" }}
+            style={{ marginTop: "180px", height: "200px" }}
           >
             {!loader ? (
               posets?.map((get, index) => {
@@ -208,7 +209,7 @@ function Content() {
                       className="category"
                       key={index}
                     >
-                      <img src={BassURl + get.service_img} alt="" />
+                      <img className="mega-Menus-Size" src={BassURl + get.service_img} alt="" />
                       <p>{get.service_title}</p>
                     </a>
                   </>
@@ -226,13 +227,13 @@ function Content() {
 
 
         {/* Featured Destinations */}
-        <div className="section-full bg-white mt-10 content-inner ">
+        <div className="section-full shadow-lg bg-white mt-10 content-inner ">
           <div className="container ">
             <div
               className="section-head text-black text-center "
               style={{ marginTop: "35px" }}
             >
-              <h2 className="box-title"> OUR SERVICE </h2>
+              <h2 className="box-title"  style={{fontFamily: "'Lato', sans-serif" , fontWeight:"500"}}> OUR SERVICE </h2>
               <div className="dlab-separator bg-primary" />
             </div>
             <ServiceSlider />
@@ -372,7 +373,7 @@ function Content() {
       <div className="section-full content-inner bg-gray shadow-lg p-3 mb-5 bg-white rounded">
         <div className="container">
           <div className="section-head text-center">
-            <h2 className="box-title">TESTIMONIAL</h2>
+            <h2 className="box-title"  style={{fontFamily: "'Lato', sans-serif" , fontWeight:"500"}}>TESTIMONIAL</h2>
             <div className="dlab-separator bg-primary" />
           </div>
           <div className="row">

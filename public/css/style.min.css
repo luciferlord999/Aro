@@ -4026,7 +4026,7 @@ blockquote:before {
 
 .header-transparent .is-fixed .main-bar {
   position: fixed;
-  background: linear-gradient(342deg, #e3e3e3, #7dc0ebfa);
+  background: linear-gradient(342deg, #ffffff, #f1f1f1fa);
 }
 
 .header-transparent .top-bar {
@@ -4425,7 +4425,7 @@ blockquote:before {
   background-repeat: no-repeat;
   /* background-size: contain; */
   /* background-position: center; */
-  background-image: url(/images/banner/bnr.webp);
+  background-image: url(/images/banner/aroBanner.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -6724,7 +6724,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 .widget-testimonial .testimonial-position {
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
-  color: #888q;
+  color: #888;
   font-size: 12px;
   font-style: inherit;
 }
@@ -6895,17 +6895,16 @@ a {
 
 .owl-next,
 .owl-prev {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 5px 8px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 22px;
-  display: inline-block;
-  cursor: pointer;
-  border-width: 0;
-  border-style: solid;
+  padding: 14px !important;
+  width: 2vw !important;
+  height: 2vw !important;
+  cursor: pointer !important;
+  border: none !important;
+  border-radius: 5vw !important;
+  background-color: #fff !important;
+  z-index: 99 !important;
+  box-shadow: #000 0px 0px 20px 5px !important;
+  top: 40% !important;
 }
 
 .owl-next:active,

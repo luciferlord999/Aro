@@ -14,6 +14,7 @@ import NewProductPage from "./ProductDetail/NewProductPage";
 import CartPage from "./CartPage/CartPage";
 import Location from "./Location/Location";
 import DefaultHome from "./compontent/DefaultHome";
+import TestingOurAppliance from "./TestingOurAppliance";
 
 // toggle login
 
@@ -34,6 +35,7 @@ function App(props) {
           <Route path="*" element={<Error />} />
           <Route exact path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/testingour" element={<TestingOurAppliance />} />
 
           <Route
             path="/our-apliances/:category_url"

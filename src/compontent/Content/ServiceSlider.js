@@ -12,11 +12,15 @@ import $ from "jquery";
 import { Link } from "react-router-dom";
 
 //Owl Carousel Settings
+
+
 const options = {
   margin: 40,
   responsiveClass: true,
   dots: true,
-  nav: true,
+  nav:true,
+ 
+  navText:["<div class='nav-button  owl-prev'></div>","<div class='nav-button owl-next'></div>"],
   loop: true,
   autoplay: true,
   // autoWidth:true,
