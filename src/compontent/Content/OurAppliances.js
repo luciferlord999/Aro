@@ -25,6 +25,7 @@ function OurAppliances() {
 
   //  sketon  state and function
   const [loader, setLoader] = useState(false);
+
   useEffect(() => {
     setLoader(true);
 
@@ -33,7 +34,7 @@ function OurAppliances() {
         setPost(response.data.data);
         setLoader(false);
       });
-    }, 1000);
+    }, 2000);
 
     // axios.get(`/web-api/all-shop-category`).then((response) => {
     //   setPost(response.data.data);
@@ -48,7 +49,7 @@ function OurAppliances() {
     responsiveClass: true,
     dots: false,
     nav: true,
-    navText:["<div class='nav-button  owl-prev'></div>","<div class='nav-button owl-next'></div>"],
+    navText: ["<img src='/images/left-arrow.webp' class='nav-buttons  owl-prevs'/>", " <img src='/images/right-arrow.webp' class='nav-buttons owl-nexts'/>"],
     autoplay: false,
 
     smartSpeed: 1000,
@@ -77,6 +78,14 @@ function OurAppliances() {
 
   // Slider Cart   product end
 
+
+
+
+
+
+
+
+
   // Show and hide buttom for product details;
   const [popup, setPopup] = useState(false);
   return (
@@ -92,18 +101,20 @@ function OurAppliances() {
 
 
 
-              
 
-                <OwlCarousel
-                  {...options}
-                  className="slider-items owl-theme owl-carousel  "
-                >
 
-                  {
+              <OwlCarousel
+                {...options}
+                className="slider-items owl-theme owl-carousel  "
+              >
+
+                {
+
+                  (
                     post?.map((data, index) => {
                       return (
                         <>
-                          <div className="cardtr">
+                          <div className="cardtr" key={index}>
                             <div className="card-headertr">
                               <img src={BassURl + data?.image} alt="user" />
                             </div>
@@ -127,14 +138,7 @@ function OurAppliances() {
                           </div>
                         </>
                       )
-                    })
-
-                  }
-
-
-
-
-                </OwlCarousel>
+                    }))
 
 
 
@@ -142,10 +146,24 @@ function OurAppliances() {
 
 
 
-             
+
+                }
 
 
-              
+
+
+              </OwlCarousel>
+
+
+
+
+
+
+
+
+
+
+
             </div>
           </div>
         </div>

@@ -12,6 +12,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link, useParams } from "react-router-dom";
 import SkeletonTrendingProduct from "../../Skeleton/SkeletonTrendingProduct";
+import BassURl from "../../Api/Api";
 
 const product = [
   {
@@ -101,15 +102,50 @@ function Products() {
   const [post, setPost] = useState(null);
   const [loader, setLoader] = useState(false);
   useEffect(() => {
-    setLoader(true);
-    setTimeout(() => {
-      axios.get(`/web-api/top-product`).then((response) => {
-        setPost(response.data.data);
-        setLoader(false);
-      });
-    }, 4000);
+    axios.get(`/web-api/top-product`).then((response) => {
+      setPost(response.data.data);
+      setLoader(false);
+    });
+
+
+
   }, []);
 
+  const options = {
+    loop: false,
+    margin: 10,
+    responsiveClass: true,
+    dots: false,
+    nav: true,
+    navText: [
+      "<img src='/images/left-arrow.webp' class='nav-buttons  owl-prevs'/>",
+      " <img src='/images/right-arrow.webp' class='nav-buttons owl-nexts'/>",
+    ],
+    autoplay: false,
+
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 2,
+      },
+      700: {
+        items: 3,
+      },
+      1000: {
+        items: 3,
+      },
+      1024: {
+        items: 3,
+      },
+    },
+  };
 
   return (
     <>
@@ -120,7 +156,7 @@ function Products() {
             <div className="dlab-separator bg-primary" />
           </div>
 
-          <section className="product-tabs section-padding position-relative ">
+          <section className="product-tabs  position-relative ">
             <div className="container">
               {/*End nav-tabs*/}
               <div
@@ -135,28 +171,84 @@ function Products() {
                   aria-labelledby="tab-one"
                 >
                   <div className="row product-grid-4">
+                    <OwlCarousel
+                      {...options}
+                      className="slider-items owl-theme owl-carousel  "
+                    >
+                      {post?.map((data, index) => {
+                        return (
+                          <>
+                            <div className="cardtr" key={index}>
+                              <div className="card-headertr">
+                                <img
+                                  src={BassURl + data?.product_image}
+                                  alt="user"
+                                />
+                              </div>
+                              <div className="card-bodytr">
+                                <div className="item-details">
+                                  <div className="item-title">
+                                    <h5
+                                      className="Heading-7 product-names"
+                                      style={{ textTransform: " uppercase" }}
+                                    >
+                                      {data?.product_title}
+                                    </h5>
+                                  </div>
+                                  <div className="rate">
+                                    <i className="fa fa-star" />
+                                    <i className="fa fa-star" />
+                                    <i className="fa fa-star" />
+                                    <i className="fa fa-star" />
+                                    <i className="fa fa-star-half" />
+                                    <i className="font-small ml-1 text-muted">
+                                      (4.0)
+                                    </i>
+                                  </div>
 
-                
+                                  <div className="items-action">
+                                    <div className="rate">
+                                      <span className="rupee remove-before">
+                                        <span style={{ fontSize: "14px" }}>
+                                          MRP:
+                                          {data.product_price
+                                            .toString()
+                                            .replace(
+                                              /\B(?=(\d{3})+(?!\d))/g,
+                                              ","
+                                            )}
+                                        </span>
+                                      </span>
+                                    </div>
+
+                                    <div className="action-add">
+                                      <div className="action-slider">
+                                        <button
+                                          className="add-to-carts addCartBtn-home"
+                                          data-cat="TOP TRENDING PRODUCT"
+                                          data-base_amt={data?.product_price}
+                                          data-text={data?.product_title}
+                                          onClick={() =>
+                                            setItems([...cartItems, data])
+                                          }
+                                        >
+                                          Add To Cart
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </>
+                        );
+                      })}
+                    </OwlCarousel>
 
 
+                    {/*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    {!loader
+                     {!loader
                       ? post?.map((data, indexs) => {
                         return (
                           <>
@@ -267,6 +359,16 @@ function Products() {
                         );
                       })
                       : <SkeletonTrendingProduct />}
+                    
+                    
+
+
+                     */}
+
+
+
+
+
 
                     {/*end product card*/}
 

@@ -13,6 +13,10 @@ function SkeletonTrendingProduct() {
   }, []);
   return (
     <>
+
+    <div className="container">
+      <div className="row">
+        
       {post?.map((data, index) => {
         return (
           <>
@@ -66,6 +70,11 @@ function SkeletonTrendingProduct() {
           </>
         );
       })}
+      </div>
+    </div>
+
+
+
 
       {/*End nav-tabs*/}
     </>

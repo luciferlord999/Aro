@@ -1,6 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import axios from "axios";
 
 function Testimonial() {
+  const [post, setPost] = useState(null);
+  // const [loader, setLoader] = useState(false);
+  useEffect(() => {
+    axios.get(`/web-api/all-testimonial`).then((response) => {
+      setPost(response.data.data);
+
+    });
+
+
+
+  }, []);
+
+  console.log(post , "hsdfdf")
+
+
+
+
+
+  const options = {
+    loop: false,
+    margin: 10,
+    responsiveClass: true,
+    dots: false,
+    nav: true,
+
+    autoplay: false,
+
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 2,
+      },
+      700: {
+        items: 3,
+      },
+      1000: {
+        items: 3,
+      },
+      1024: {
+        items: 3,
+      },
+    },
+  };
+
+
+
+
   return (
     <>
       {/* Our Portfolio */}
@@ -12,7 +70,7 @@ function Testimonial() {
           </div>
 
           <div className="container">
-            
+
             <div className="row">
               <div className="col-lg-4">
                 <div className="single-choose-right shadow-sm mb-5 bg-white rounded ">
@@ -31,7 +89,7 @@ function Testimonial() {
                     diam nonumy eir mod tempor invidunt ut labore et.
                   </p>
                 </div>
-                
+
               </div>
               <div className="col-lg-4">
                 <div
@@ -66,12 +124,23 @@ function Testimonial() {
                     diam nonumy eir mod tempor invidunt ut labore et.
                   </p>{" "}
                 </div>
-                
+
               </div>
             </div>
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Our Portfolio END */}
       {/* <!-- Online Community -->

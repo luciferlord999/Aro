@@ -231,9 +231,9 @@ function Content() {
           <div className="container ">
             <div
               className="section-head text-black text-center "
-              style={{ marginTop: "35px" }}
+           
             >
-              <h2 className="box-title"  style={{fontFamily: "'Lato', sans-serif" , fontWeight:"500"}}> OUR SERVICE </h2>
+              <h2 className="box-title"  style={{fontFamily: "'Lato', sans-serif" ,  fontSize:"30px"}}> OUR SERVICE </h2>
               <div className="dlab-separator bg-primary" />
             </div>
             <ServiceSlider />

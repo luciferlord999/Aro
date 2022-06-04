@@ -2,6 +2,9 @@ import React from "react";
 import Navbar from "../compontent/Navbar/Navbar";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import LoadingBox from "../compontent/LoadingBox";
+// import NavbaAIR from "../compontent/Navbar/NavbaAIR";
+// import Navbar from "../compontent/Navbar/Navbar"
+import ServiceNavbar from "../compontent/Navbar/ServiceNavbar";
 
 function OurServiceScreen(props) {
   const params = useParams();
@@ -56,52 +59,51 @@ function OurServiceScreen(props) {
   return (
     <>
       {img?.map((data, index) => {
-        if (data.name === params.name) { 
+        if (data.name === params.name) {
+
+
+
+
+
+
+
           return (
             <>
-            
-              <div className="container-fluid">
-                {/* bannenr section start */}
-                <section
-                  className="main-category-section shadow-lgs p-0"
-                  style={{
-                    borderRadius: "2rem",
-                    background:
-                      "linear-gradient(to bottom, #87cefa45 0%, #78BFEB 100%)",
-                  }}
-                >
-                  <div className="banner-content banner-air-purifier">
-                    <div className="row align-items-center text-center">
-                      <div className="col-lg-6 col-md-6 padding-l-10">
-                        <h1 className="title" >{params.name} </h1>
-                        <p className="subTitle">
-                          Range of Air Purifiers to make Air Pure, Healthy &amp;
-                          Pollution Free
-                        </p>
-                      </div>
-                      <div className="col-lg-6 col-md-6">
-                        <div className="bnr-img">
-                          <img
-                            src="https://www.assureshift.in/sites/default/files/images/blog/professional-ac-repair-services-in-mumbai.jpg"
-                            alt="KENT Air Purifiers"
-                            title="KENT Air Purifiers"
-                            style={{ borderRadius: "2rem" }}
-                            className="d-none d-md-block"
-                            width={1900}
-                            height={1100}
-                          />
-                          {/* <img
-                                  src="https://www.kent.co.in/images/air-purifier/hepa-air-purifier-mobile.png"
-                                  alt
-                                  className="d-block d-md-none"
-                                  width={778}
-                                  height={500}
-                                /> */}
-                        </div>
-                      </div>
+              <ServiceNavbar />
+
+              <div
+                className="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+                style={{ backgroundImage: "url(images/AC.webp)" }}
+              >
+                <div className="container">
+                  <div className="dlab-bnr-inr-entry">
+                    <h1 className="text-white">{data?.name}</h1>
+                    {/* <p>Find awesome places, bars, restaurants &amp; activities.</p> */}
+                    {/* Breadcrumb row */}
+                    <div className="breadcrumb-row">
+                      <ul className="list-inline">
+                        <li>
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li>Listings</li>
+                      </ul>
                     </div>
+                    {/* Breadcrumb row END */}
                   </div>
-                </section>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+              <div className="container">
+                {/* bannenr section start */}
 
                 <div
                   className="row"

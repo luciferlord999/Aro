@@ -18,12 +18,12 @@ const options = {
   margin: 40,
   responsiveClass: true,
   dots: true,
-  nav:true,
- 
-  navText:["<div class='nav-button  owl-prev'></div>","<div class='nav-button owl-next'></div>"],
+  nav: true,
+
+  navText: ["<img src='/images/left-arrow.webp' class='nav-button  owl-prev'/>", " <img src='/images/right-arrow.webp' class='nav-button owl-next'/>"],
   loop: true,
-  autoplay: true,
-  // autoWidth:true,
+  autoplay: false,
+  // autoWidth:true, 
 
   smartSpeed: 1000,
   responsive: {

@@ -9,23 +9,19 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 function SkeletonOurApp() {
   const [post, setPost] = useState(null);
   useEffect(() => {
-    axios.get(`/web-api/top-product`).then((response) => {
+    axios.get(`/web-api/all-shop-category`).then((response) => {
       setPost(response.data.data);
     });
   }, []);
 
   const options = {
-    loop: true,
-    margin: 40,
+    loop: false,
+    margin: 10,
     responsiveClass: true,
-    dots: true,
+    dots: false,
     nav: true,
-    autoplay: true,
-    // autoWidth:true,
-    navText: [
-      "<div class='nav-button owl-prev'>‹</div>",
-      "<div class='nav-button owl-next'>›</div>",
-    ],
+    navText: ["<img src='/images/left-arrow.webp' class='nav-buttons  owl-prevs'/>", " <img src='/images/right-arrow.webp' class='nav-buttons owl-nexts'/>"],
+    autoplay: false,
 
     smartSpeed: 1000,
     responsive: {
@@ -34,6 +30,7 @@ function SkeletonOurApp() {
       },
       400: {
         items: 1,
+        nav: false,
       },
       600: {
         items: 2,
@@ -44,42 +41,60 @@ function SkeletonOurApp() {
       1000: {
         items: 3,
       },
+      1024: {
+        items: 3,
+      },
     },
   };
 
   return (
     <>
+
+
+
       <SkeletonTheme
-        baseColor="#c0e8ff"
-        highlightColor="rgb(93 160 241 / 38%)"
         borderRadius="0.5rem"
         duration={2}
+
       >
-        <div className="bodss">
-          <div className="containersf">
-
-
-          
-            <div className=" cardssf" style={{ height: "440px" }}>
-              <div className="boxssf">
-                <div className="contentsf">
-                  <Skeleton height={"300px"} width=" 241px" margin-top="12px" />
-
-                  <p className="text-center">
-                    {" "}
-                    <Skeleton height="15px" width="55px" />
-                  </p>
-
-                  <p className="text-center">
-                    {" "}
-                    <Skeleton height="25px" width="100px" />
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="cardtr">
+          <div className="card-headertr">
+            {/* <img src={BassURl + data?.image} alt="user" /> */}
+            <Skeleton height={"350px"} width={"300px"} />
           </div>
+          <Skeleton height={"150px"} width={"300px"} />
         </div>
+        <div className="cardtr">
+          <div className="card-headertr">
+            {/* <img src={BassURl + data?.image} alt="user" /> */}
+            <Skeleton height={"350px"} width={"300px"} />
+          </div>
+          <Skeleton height={"150px"} width={"300px"} />
+        </div>
+        <div className="cardtr">
+          <div className="card-headertr">
+            {/* <img src={BassURl + data?.image} alt="user" /> */}
+            <Skeleton height={"350px"} width={"300px"} />
+          </div>
+          <Skeleton height={"150px"} width={"300px"} />
+        </div>
+
+
+
+
+
       </SkeletonTheme>
+
+
+
+
+
+
+
+
+
+
+
     </>
   );
 }
