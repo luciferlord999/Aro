@@ -6896,8 +6896,8 @@ a {
 .owl-next,
 .owl-prev {
   padding: 14px !important;
-  width: 4vw !important;
-  height: 4vw !important;
+  width: 3vw !important;
+  height: 3vw !important;
   cursor: pointer !important;
   border: none !important;
   border-radius: 5vw !important;
@@ -6920,8 +6920,8 @@ a {
 .owl-nexts,
 .owl-prevs {
   padding: 14px !important;
-  width: 4vw !important;
-  height: 4vw !important;
+  width: 3vw !important;
+  height: 3vw !important;
   cursor: pointer !important;
   border: none !important;
   border-radius: 5vw !important;

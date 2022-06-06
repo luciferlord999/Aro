@@ -31,101 +31,66 @@ function TestingOurAppliance() {
   return (
     <>
 
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-3 col-xl-3'></div>
+          <div className='col-lg-9 col-xl-9'>
+            <div className='row'>
+              <div className='service-page-section'>
+                <div className='service-page-list-wrap'>
+                  <div className='service-page-info'>
+                    <figure>
+                      <a href="">
+                        <img src="http://3.110.38.250/assets/uploads/category/thumbnail_images/16519221705.png" alt="img-description" />
+                      </a>
+                    </figure>
 
-      <div className="containertr">
-        {
-          post?.map((data, index) => {
-            return (
-              <>
-                <div className="cardtr">
-                  <div className="card-headertr">
-                    <img src={BassURl + data?.product_image} alt="user" />
+                    <div className='ro-btnarea ro-sm-btn'>
+                      <button className='ro-pb'><span>ADD TO CART</span> <i classname='fa fa-cart'></i></button>
+
+                    </div>
+
                   </div>
-                  <div className="card-bodytr">
+
+                  <div className='ro-service-info'>
+                    <div className='ro-service-details'>
+                      <h4>hello</h4>
 
 
 
+                    </div>
 
 
 
-                    <div className='item-details'>
+                    <div className='ro-servicefeature_star'>
+                      <span className='ro-serviceRating_stars'>
+                        <span></span>
 
-
-                      <div className='item-title'>
-                        <h5 className='Heading-7 product-names' style={{ textTransform: " uppercase" }}>
-                          {data?.product_title}
-                        </h5>
-
+                      </span>
 
 
 
+                      <div className='ro-totalreview'>
+                      <span>
+                        "4.5"
+                      </span>
+                      <em>user review</em>
+
+                    </div>
 
 
 
+                    </div>
 
-
-
-                      </div>
-                      <div className="rate">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star-half" />
-                        <i className="font-small ml-1 text-muted">
-                          (4.0)
-                        </i>
-                      </div>
-
-
-
-
-                      <div className='items-action'>
-
-                        <div className='rate'>
-
-                          <span className='rupee remove-before'>
-                            <span style={{ fontSize: "14px" }}>MRP:{data.product_price
-                              .toString()
-                              .replace(
-                                /\B(?=(\d{3})+(?!\d))/g,
-                                ","
-                              )}</span>
-                          </span>
-
-                        </div>
-
-                        <div className='action-add'>
-
-
-                          <div className='action-slider'>
-                            <button className='add-to-carts addCartBtn-home' data-cat="TOP TRENDING PRODUCT"
-                              data-base_amt={data?.product_price} data-text={data?.product_title}>
-                              Add To Cart
-
-
-                            </button>
-                          </div>
-
-
-
-
-
-
-
-                        </div>
-
-
-
-                      </div>
+                    <div className='ro-service-description'>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod error nostrum tempore aut ducimus odio excepturi numquam in provident eos magnam dolorum quaerat blanditiis voluptatibus neque aperiam, inventore modi! Esse.</p>
 
                     </div>
 
 
 
 
-
-
+                   
 
 
 
@@ -140,15 +105,20 @@ function TestingOurAppliance() {
 
 
                   </div>
+
                 </div>
-              </>
-            )
-          })
 
-        }
-
-
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+
+
+
 
       {/* wrapper*/}
 

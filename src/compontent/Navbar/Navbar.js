@@ -61,36 +61,7 @@ function Navbar() {
               </button>
               {/* extra nav */}
 
-              <div className="megaMenuHide" style={{}}>
-                {
-                  posets?.map((data, index) => {
-                    return (
-                      <div
-                        className="Grid__item--JyxXq SearchAndGridHeader__gridContainerClass--2ra3O"
-                        title={data?.service_title}
-                      >
-                        <div className="LazyLoadImage__imageContainer--3EOU_ Grid__imageContainer--1Fs8D SearchAndGridHeader__imageContainerClass--2nzhk">
-                          <div className="TemplateShimmer__shimmer--1HNwN TemplateShimmer__shimmerWrapper--Py2CJ TemplateShimmer__hidden--1oL9u" />
-                          <img
-                            className="Grid__image--IV0GE"
-                            src={BassURl + data?.service_img}
-                            alt=""
-                            itemScope=""
-                            itemProp="image"
-                          />
-                        </div>
-                        <span className="Grid__text--cEuUL SearchAndGridHeader__gridtextClass--35aaB">
-                          {data?.service_title}
-                        </span>
-                      </div>
-
-                    )
-                  })
-
-                }
-
-
-              </div>
+            
 
 
 
@@ -156,6 +127,43 @@ function Navbar() {
 
 
           </div>
+
+
+          <div className="main-bar  clearfix gap-from-top">
+            
+          <div className="megaMenuHide" style={{}}>
+                {
+                  posets?.map((data, index) => {
+                    return (
+                      <div
+                        className="Grid__item--JyxXq SearchAndGridHeader__gridContainerClass--2ra3O"
+                        title={data?.service_title}
+                      >
+                        <div className="LazyLoadImage__imageContainer--3EOU_ Grid__imageContainer--1Fs8D SearchAndGridHeader__imageContainerClass--2nzhk">
+                          <div className="TemplateShimmer__shimmer--1HNwN TemplateShimmer__shimmerWrapper--Py2CJ TemplateShimmer__hidden--1oL9u" />
+                          <img
+                            className="Grid__image--IV0GE"
+                            src={BassURl + data?.service_img}
+                            alt=""
+                            itemScope=""
+                            itemProp="image"
+                          />
+                        </div>
+                        <span className="Grid__text--cEuUL SearchAndGridHeader__gridtextClass--35aaB">
+                          {data?.service_title}
+                        </span>
+                      </div>
+
+                    )
+                  })
+
+                }
+
+
+              </div>
+
+          </div>
+
 
 
 
