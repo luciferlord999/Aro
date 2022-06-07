@@ -180,10 +180,12 @@ function Products() {
                           <>
                             <div className="cardtr" key={index}>
                               <div className="card-headertr">
+                              <a href={`/product-details/${data.product_url}`}>
                                 <img
                                   src={BassURl + data?.product_image}
                                   alt="user"
                                 />
+                                </a>
                               </div>
                               <div className="card-bodytr">
                                 <div className="item-details">
